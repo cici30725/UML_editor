@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditorController">
+  <children>
+    <MenuBar id="menu" fx:id="menu" VBox.vgrow="NEVER">
+      <menus>
+        <Menu id="menu-edit" fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem id="menu-edit-newitem" fx:id="groupOption" mnemonicParsing="false" onAction="#groupElements" text="Group" />
+                  <MenuItem id="menu-edit-newitem" fx:id="unGroupOption" mnemonicParsing="false" onAction="#UnGroupElements" text="UnGroup" />
+                  <MenuItem id="menu-edit-newitem" fx:id="changeNameOption" mnemonicParsing="false" onAction="#changeObjectName" text="Change Object Name" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <SplitPane dividerPositions="0.11" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <items>
+          <AnchorPane fx:id="toolbar" minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="123.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane fx:id="selectOption" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" />
+                        <Pane fx:id="assoLineOption" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" />
+                        <Pane fx:id="generalLineOption" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" />
+                        <Pane fx:id="compositLineOption" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" />
+                        <Pane fx:id="createOption" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" />
+                        <Pane fx:id="usecaseOption" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+          <AnchorPane fx:id="canvas" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+  </children>
+</VBox>
